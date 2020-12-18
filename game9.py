@@ -15,24 +15,24 @@ def ball_animation():
 	
     if ball.right >= screen_width:
         score_time = pygame.time.get_ticks()
-	      opponent_score += 1
+	opponent_score += 1
 	
     if ball.colliderect(player) and ball_speed_x > 0:
         if abs(ball.right - player.left) < 10:
-	          ball_speed_x *= -1
+	    ball_speed_x *= -1
       
         elif abs(ball.bottom - player.top) < 10 and ball_speed_y > 0:
-	          ball_speed_y *= -1
+	    ball_speed_y *= -1
         elif abs(ball.top - player.bottom) < 10 and ball_speed_y < 0 :
-	          ball_speed_y *= -1
+	    ball_speed_y *= -1
 	
     if ball.colliderect(opponent) and ball_speed_x < 0:
-	      if abs(ball.left - opponent.right) < 10:
-	          ball_speed_x *= -1	
-	  elif abs(ball.bottom - opponent.top) < 10 and ball_speed_y > 0:
-			  ball_speed_y *= -1
-		elif abs(ball.top - opponent.bottom) < 10 and ball_speed_y < 0:
-			  ball_speed_y *= -1
+        if abs(ball.left - opponent.right) < 10:
+	    ball_speed_x *= -1	
+	elif abs(ball.bottom - opponent.top) < 10 and ball_speed_y > 0:
+            ball_speed_y *= -1
+        elif abs(ball.top - opponent.bottom) < 10 and ball_speed_y < 0:
+	    ball_speed_y *= -1
 
 def player_animation():
     player.y += player_speed
@@ -40,20 +40,20 @@ def player_animation():
     if player.top <= 0:
         player.top = 0
     if player.bottom >= screen_height:
-	      player.bottom = screen_height
+        player.bottom = screen_height
 
 def opponent_1():
     if opponent.top < ball.y:
         opponent.y += opponent_speed
 	
     if opponent.bottom > ball.y:
-	      opponent.y -= opponent_speed
+	opponent.y -= opponent_speed
    
     if opponent.top <= 0:
         opponent.top = 0
 	
     if opponent.bottom >= screen_height:
-	      opponent.bottom = screen_height
+	opponent.bottom = screen_height
 	
 def ball_start():
     global ball_speed_x, ball_speed_y, ball_moving, score_time
@@ -63,20 +63,20 @@ def ball_start():
 
     if current_time - score_time < 700:
         number_three = basic_font.render("3",False,light_grey)
-	      screen.blit(number_three,(screen_width/2 - 10, screen_height/2 + 20))
+	screen.blit(number_three,(screen_width/2 - 10, screen_height/2 + 20))
     if 700 < current_time - score_time < 1400:
-	      number_two = basic_font.render("2",False,light_grey)
-	      screen.blit(number_two,(screen_width/2 - 10, screen_height/2 + 20))
+	number_two = basic_font.render("2",False,light_grey)
+	screen.blit(number_two,(screen_width/2 - 10, screen_height/2 + 20))
     if 1400 < current_time - score_time < 2100:
-	      number_one = basic_font.render("1",False,light_grey)
-	      screen.blit(number_one,(screen_width/2 - 10, screen_height/2 + 20))
+	number_one = basic_font.render("1",False,light_grey)
+	screen.blit(number_one,(screen_width/2 - 10, screen_height/2 + 20))
 
     if current_time - score_time < 2100:
 	      ball_speed_y, ball_speed_x = 0,0
     else:
         ball_speed_x = 7 * random.choice((1,-1))
-	      ball_speed_y = 7 * random.choice((1,-1))
-	      score_time = None
+	ball_speed_y = 7 * random.choice((1,-1))
+	score_time = None
 
 pygame.mixer.pre_init(44100,-16,1, 1024)
 pygame.init()
