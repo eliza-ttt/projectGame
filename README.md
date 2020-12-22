@@ -1,9 +1,9 @@
 # projectGame
 # PING PONG GAME
 <br>This is the game for Programming Languages 1
-Programming language Python
-IDE - PyCharm
-Graphical User Interface - Pygame
+<br>Programming language Python
+<br>IDE - PyCharm
+<br>Graphical User Interface - Pygame
 
 # Description:
 Small paddles are used to hit a ping pong ball back and forth in such a way that your opponent is unable to return it.
