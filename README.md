@@ -5,5 +5,5 @@
 Description:
 Small paddles are used to hit a ping pong ball back and forth in such a way that your opponent is unable to return it.
 
-![alt](https://vk.com/id387139764?z=photo387139764_457239017%2Falbum387139764_00%2Frev)
+![alt](https://sun9-28.userapi.com/impg/Ffi_jxBx1DLxHQph71PS8CN1jhRtwHY5IyuR4A/Cis1kTzXGbc.jpg?size=1348x863&quality=96&proxy=1&sign=d0198b2aceccd1ce412cce2058d603a7&type=album)
 
