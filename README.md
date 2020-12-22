@@ -1,5 +1,5 @@
 # projectGame
-#PING PONG GAME
+# PING PONG GAME
 <br>This is the game for Programming Languages 1
 
 Description:
